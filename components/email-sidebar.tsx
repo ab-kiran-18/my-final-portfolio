@@ -17,13 +17,13 @@ export function EmailSidebar() {
     >
       <div className="flex flex-col items-center">
         <motion.a
-          href="mailto:damonsavy.freelance@gmail.com"
+          href="mailto:bhargavakiran18.w@gmail.com"
           className="font-mono text-light-slate hover:text-green transition-colors duration-300 tracking-widest"
           style={{ writingMode: "vertical-rl" }}
           whileHover={{ y: -5 }}
           transition={{ duration: 0.2 }}
         >
-          damonsavy.freelance@gmail.com
+          bhargavakiran18.w@gmail.com
         </motion.a>
         <motion.div
           className="h-24 w-px bg-light-slate mt-6"

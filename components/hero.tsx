@@ -49,7 +49,7 @@ export function Hero() {
             variants={itemVariants}
             className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-slate"
           >
-            I build exceptional web experiences.
+            I build great web experiences.
           </motion.h2>
 
           <motion.p variants={itemVariants} className="max-w-xl text-slate text-base sm:text-lg">
@@ -61,14 +61,14 @@ export function Hero() {
             .
           </motion.p>
 
-          {/* <motion.div variants={itemVariants} className="pt-4 sm:pt-6">
+          <motion.div variants={itemVariants} className="pt-4 sm:pt-6">
             <Button className="button text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4" asChild>
               <a href="#projects" className="group relative overflow-hidden">
                 <span className="relative z-10">Check out my work!</span>
                 <span className="absolute inset-0 bg-green/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
               </a>
             </Button>
-          </motion.div> */}
+          </motion.div>
         </motion.div>
       )}
     </section>

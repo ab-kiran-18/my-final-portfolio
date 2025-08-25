@@ -81,7 +81,7 @@ export function About() {
           <div className="relative w-48 h-48 sm:w-60 sm:h-60 md:w-64 md:h-64 rounded-md overflow-hidden group">
             <div className="absolute inset-0 bg-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
             <Image
-              src="/placeholder.svg?height=256&width=256&query=professional portrait with dark background"
+              src="/assets/about/profile-img.png"
               alt="Profile picture"
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"

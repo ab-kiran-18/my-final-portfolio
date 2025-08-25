@@ -9,29 +9,38 @@ import { useMobile } from "@/hooks/use-mobile"
 
 const featuredProjects = [
   {
-    title: "Spotify Profile",
+    title: "AI Interview",
     description:
-      "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    tech: ["React", "Express", "Spotify API", "Styled Components"],
+      "Executed a comprehensive redesign of the AI Interview - a voice-based conversational AI product by conducting in-depth UX research and competitive analysis, resulting in a 26% increase in Net Promoter Score (NPS).",
+    tech: ["Next.js", "Tailwind CSS", "Shadcn", "Websockets", "Real-time data streaming", "Monaco Editor"],
     github: "https://github.com",
     external: "https://example.com",
     image:
-      "/placeholder.svg?height=400&width=600&query=spotify dashboard interface with dark theme and data visualization",
+      "/assets/projects/ai-interview.png"
   },
   {
-    title: "Halcyon Theme",
+    title: "Linkedin Talent Discovery",
     description:
       "A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.",
-    tech: ["VS Code", "Sublime Text", "Atom", "iTerm2", "Hyper"],
+    tech: ["React.js", "Styled-components", "Material UI", "Tanstack Table", "Websockets"],
     github: "https://github.com",
     external: "https://example.com",
     image: "/placeholder.svg?height=400&width=600&query=code editor with dark blue theme",
   },
   {
-    title: "Build UI",
+    title: "AI Driven Client Dashboard",
+    description:
+      "A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.",
+    tech: ["Server Side Events", "React DND", "Framer Motion", "React Markdown Renderer", "puppeteer"],
+    github: "https://github.com",
+    external: "https://example.com",
+    image: "/placeholder.svg?height=400&width=600&query=code editor with dark blue theme",
+  },
+  {
+    title: "Myways Component Library",
     description:
       "A comprehensive component library and design system that powers enterprise applications. Features accessible, reusable components with thorough documentation and examples.",
-    tech: ["React", "TypeScript", "Storybook", "Figma"],
+    tech: ["Next.js", "Javascript", "Styled-components", "Material UI"],
     github: "https://github.com",
     external: "https://example.com",
     image: "/placeholder.svg?height=400&width=600&query=component library with dark theme showing various UI elements",
@@ -40,23 +49,23 @@ const featuredProjects = [
 
 const otherProjects = [
   {
-    title: "GitHub Profile",
+    title: "AI Onboarding System",
     description:
       "A nicer look at your GitHub profile and repository stats with data visualizations of your top languages and stars. Sort through your top repos by number of stars, size, or most recently pushed to.",
-    tech: ["Next.js", "Chart.js", "GitHub API"],
+    tech: ["Next.js", "Framer Motion", "GitHub API"],
     github: "https://github.com",
     external: "https://example.com",
   },
   {
-    title: "Markdown Editor",
+    title: "Coding Platform",
     description:
       "A full-featured, open-source markdown editor with live preview and syntax highlighting. Supports GitHub Flavored Markdown, math expressions, and custom plugins.",
-    tech: ["TypeScript", "React", "CodeMirror"],
+    tech: ["TypeScript", "React", "Monaco editor", "Tailwind CSS"],
     github: "https://github.com",
     external: "https://example.com",
   },
   {
-    title: "Weather App",
+    title: "Dynamic Data Grid",
     description:
       "A beautiful weather application with animated visualizations, hourly and weekly forecasts, and location search. Uses OpenWeather API for accurate data.",
     tech: ["React", "D3.js", "OpenWeather API"],
@@ -64,7 +73,7 @@ const otherProjects = [
     external: "https://example.com",
   },
   {
-    title: "Portfolio Generator",
+    title: "Form Builder",
     description:
       "A tool that helps developers create beautiful portfolio websites without writing code. Features customizable templates, themes, and content sections.",
     tech: ["Vue.js", "Firebase", "Tailwind CSS"],
@@ -72,7 +81,7 @@ const otherProjects = [
     external: "https://example.com",
   },
   {
-    title: "Finance Dashboard",
+    title: "Presentation Builder", // for employer branding
     description:
       "A comprehensive financial dashboard for tracking investments, expenses, and income. Features interactive charts, budget planning tools, and financial insights.",
     tech: ["React", "Redux", "D3.js", "Firebase"],
@@ -80,7 +89,7 @@ const otherProjects = [
     external: "https://example.com",
   },
   {
-    title: "AI Image Generator",
+    title: "PDF Report Generator", // using puppeteer
     description:
       "An application that generates unique images based on text prompts using AI. Features style customization, resolution options, and image history.",
     tech: ["Next.js", "OpenAI API", "Vercel"],
@@ -110,13 +119,13 @@ export function Projects() {
         {featuredProjects.map((project, i) => (
           <motion.div
             key={i}
-            className={`relative grid gap-5 sm:gap-6 md:flex  items-center ${i % 2 === 0 ? "" : "md:text-right"}`}
+            className={`relative grid md:grid-cols-12 gap-5 sm:gap-6 items-center ${i % 2 === 0 ? "" : "md:text-right"}`}
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
             transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }}
           >
             <div
-              className={`relative md:col-span-7 rounded-lg overflow-hidden shadow-2xl ${i % 2 === 0 ? "md:order-2" : "md:order-1"
+              className={`relative md:col-span-5 rounded-lg overflow-hidden shadow-2xl ${i % 2 === 0 ? "md:order-2" : "md:order-1"
                 }`}
               onMouseEnter={() => setHoveredProject(i)}
               onMouseLeave={() => setHoveredProject(null)}
@@ -149,7 +158,7 @@ export function Projects() {
             </div>
 
             <div
-              className={`md:col-span-6 md:col-start-1 md:row-start-1 ${i % 2 === 0 ? "md:order-1" : "md:order-2 md:col-start-6"
+              className={`md:col-span-7 md:col-start-1 md:row-start-1 ${i % 2 === 0 ? "md:order-1" : "md:order-2 md:col-start-6"
                 } z-10`}
             >
               <motion.p
@@ -226,88 +235,7 @@ export function Projects() {
         ))}
       </div>
 
-      {/* <motion.h3
-        className="text-lg sm:text-xl font-bold text-center mt-20 sm:mt-32 mb-10 sm:mb-16"
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
-      >
-        Other Noteworthy Projects
-      </motion.h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-        {otherProjects.map((project, i) => (
-          <motion.div
-            key={i}
-            className="group relative bg-light-navy rounded-lg p-5 sm:p-7 h-full flex flex-col hover:-translate-y-2 transition-all duration-300 border border-lightest-navy/20 backdrop-blur-sm bg-opacity-80"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.5, delay: 0.5 + i * 0.05 }}
-          >
-            <header className="flex justify-between items-start mb-5 sm:mb-7">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-navy rounded-lg shadow-md border border-lightest-navy/30">
-                <Folder className="text-green" size={isMobile ? 20 : 24} />
-              </div>
-              <div className="flex gap-3 sm:gap-4">
-                {project.github && (
-                  <Link
-                    href={project.github}
-                    className="text-lightest-slate hover:text-green focus-ring transition-all duration-300"
-                    aria-label={`GitHub link for ${project.title}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Github size={isMobile ? 18 : 20} />
-                  </Link>
-                )}
-                {project.external && (
-                  <Link
-                    href={project.external}
-                    className="text-lightest-slate hover:text-green focus-ring transition-all duration-300"
-                    aria-label={`External link for ${project.title}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <ExternalLink size={isMobile ? 18 : 20} />
-                  </Link>
-                )}
-              </div>
-            </header>
-
-            <h3 className="text-lg sm:text-xl font-bold text-lightest-slate mb-2 group-hover:text-green transition-colors duration-300">
-              <Link
-                href={project.external || project.github}
-                className="focus-ring"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {project.title}
-              </Link>
-            </h3>
-
-            <p className="text-light-slate mb-6 flex-grow text-sm sm:text-base">{project.description}</p>
-
-            <footer className="mt-auto">
-              <ul className="flex flex-wrap gap-2 text-xs font-mono text-light-slate">
-                {project.tech.map((tech, j) => (
-                  <li key={j} className="bg-navy px-2 py-1 rounded-full shadow-sm border border-lightest-navy/30">
-                    {tech}
-                  </li>
-                ))}
-              </ul>
-            </footer>
-
-            <motion.div
-              className="absolute bottom-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              initial={{ scale: 0.8 }}
-              whileHover={{ scale: 1, rotate: 0 }}
-              transition={{ duration: 0.2 }}
-            >
-              <ArrowUpRight className="text-green" size={isMobile ? 16 : 20} />
-            </motion.div>
-          </motion.div>
-        ))}
-      </div> */}
     </section>
   )
 }

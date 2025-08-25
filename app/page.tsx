@@ -17,7 +17,7 @@ export default function Home() {
       <Header />
       <SocialSidebar />
       <EmailSidebar />
-      <main className="px-6 md:px-12 lg:px-24 mx-auto max-w-6xl">
+      <main className="px-6 md:px-12 lg:px-24 mx-auto max-w-7xl">
         <Hero />
         <About />
         <Experience />

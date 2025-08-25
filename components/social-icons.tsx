@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, Linkedin, Codepen, Twitter } from "lucide-react"
+import { Github, Linkedin, Codepen, Twitter, Instagram } from "lucide-react"
 import { motion } from "framer-motion"
 
 interface SocialIconsProps {
@@ -12,17 +12,17 @@ export function SocialIcons({ orientation = "horizontal" }: SocialIconsProps) {
     {
       name: "GitHub",
       icon: <Github size={20} />,
-      url: "https://github.com",
+      url: "https://github.com/ab-kiran-18",
     },
     {
       name: "LinkedIn",
       icon: <Linkedin size={20} />,
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/in/bhargava-kiran/",
     },
     {
-      name: "CodePen",
-      icon: <Codepen size={20} />,
-      url: "https://codepen.io",
+      name: "Instagram",
+      icon: <Instagram size={20} />,
+      url: "https://www.instagram.com/bhargava_kiran/",
     },
     {
       name: "Twitter",

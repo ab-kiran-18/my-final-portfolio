@@ -10,7 +10,7 @@ import { useMobile } from "@/hooks/use-mobile"
 const navLinks = [
   { name: "About", url: "#about" },
   { name: "Experience", url: "#experience" },
-  { name: "Projects", url: "#projects" },
+  // { name: "Projects", url: "#projects" },
   // { name: "Writing", url: "#writing" },
   { name: "Contact", url: "#contact" },
 ]
@@ -104,7 +104,10 @@ export function Header() {
             transition={{ duration: 0.3, delay: 0.5 }}
           >
             <Button className="button" asChild>
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://drive.google.com/file/d/1opAf_3Nslhdoe-C4VRO0oCgugWxMn8tI/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer">
                 Resume
               </a>
             </Button>
