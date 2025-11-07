@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import Image from "next/image"
-import { useMobile } from "@/hooks/use-mobile"
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import Image from "next/image";
+import { useMobile } from "@/hooks/use-mobile";
 
 const skills = [
   "JavaScript (ES6+)",
@@ -14,12 +14,12 @@ const skills = [
   "Tailwind CSS",
   "Framer Motion",
   "Web Performance",
-]
+];
 
 export function About() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const isMobile = useMobile()
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isMobile = useMobile();
 
   return (
     <section id="about" ref={ref} className="py-16 sm:py-24">
@@ -41,19 +41,25 @@ export function About() {
         >
           <div className="space-y-4 sm:space-y-5 text-slate text-base sm:text-lg">
             <p>
-              My love for Web development started back in my 2nd year of college. One day, I stumbled upon a youtube video on a CSS challenge by {" "}
+              My love for Web development started back in my 2nd year of
+              college. One day, I stumbled upon a youtube video on a CSS
+              challenge by{" "}
               <a href="#" className="link">
                 Kevin Powell
               </a>{" "}
-              and that just hooked me! I got fascinated with how you can style things and even create complex shapes using just CSS. I spent a lot of time experimenting and making all sorts of designs, which really made me fall in love with Frontend.
+              and that just hooked me! I got fascinated with how you can style
+              things and even create complex shapes using just CSS. I spent a
+              lot of time experimenting and making all sorts of designs, which
+              really made me fall in love with Frontend.
             </p>
             <p>
-              Now, I’m {" "}
+              Now, I’m{" "}
               <a href="#" className="link">
                 Leading the Frontend at Zeko AI
-              </a> {" "}
-              , a startup where I get to turn ideas into reality every day. I love working with new tech, creating smooth User Experiences, User-centric and Pixel Perfect web{" "}
-              .
+              </a>{" "}
+              , a startup where I get to turn ideas into reality every day. I
+              love working with new tech, creating smooth User Experiences,
+              User-centric and Pixel Perfect web .
             </p>
             <p>Here are a few technologies I've been working with recently:</p>
             <ul className="grid grid-cols-2 gap-2 mt-4">
@@ -62,7 +68,9 @@ export function About() {
                   key={i}
                   className="flex items-center font-mono text-xs sm:text-sm"
                   initial={{ opacity: 0, x: -10 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                  animate={
+                    isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }
+                  }
                   transition={{ duration: 0.3, delay: 0.3 + i * 0.1 }}
                 >
                   <span className="text-green mr-2">▹</span> {skill}
@@ -91,5 +99,5 @@ export function About() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

@@ -10,24 +10,19 @@ interface SocialIconsProps {
 export function SocialIcons({ orientation = "horizontal" }: SocialIconsProps) {
   const socialLinks = [
     {
-      name: "GitHub",
-      icon: <Github size={20} />,
-      url: "https://github.com/ab-kiran-18",
-    },
-    {
       name: "LinkedIn",
       icon: <Linkedin size={20} />,
       url: "https://www.linkedin.com/in/bhargava-kiran/",
     },
     {
+      name: "GitHub",
+      icon: <Github size={20} />,
+      url: "https://github.com/ab-kiran-18",
+    },
+    {
       name: "Instagram",
       icon: <Instagram size={20} />,
       url: "https://www.instagram.com/bhargava_kiran/",
-    },
-    {
-      name: "Twitter",
-      icon: <Twitter size={20} />,
-      url: "https://twitter.com",
     },
   ]
 

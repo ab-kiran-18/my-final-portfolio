@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { SocialIcons } from "@/components/social-icons"
-import { useMobile } from "@/hooks/use-mobile"
+import { motion } from "framer-motion";
+import { SocialIcons } from "@/components/social-icons";
+import { useMobile } from "@/hooks/use-mobile";
 
 export function SocialSidebar() {
-  const isMobile = useMobile()
+  const isMobile = useMobile();
 
-  if (isMobile) return null
+  if (isMobile) return null;
 
   return (
     <motion.div
@@ -26,5 +26,5 @@ export function SocialSidebar() {
         />
       </div>
     </motion.div>
-  )
+  );
 }

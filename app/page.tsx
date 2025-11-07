@@ -1,14 +1,12 @@
-import { Header } from "@/components/header"
-import { Hero } from "@/components/hero"
-import { About } from "@/components/about"
-import { Experience } from "@/components/experience"
-import { Projects } from "@/components/projects"
-import { Writing } from "@/components/writing"
-import { Contact } from "@/components/contact"
-import { Footer } from "@/components/footer"
-import { SocialSidebar } from "@/components/social-sidebar"
-import { EmailSidebar } from "@/components/email-sidebar"
-import { CursorRing } from "@/components/cursor-ring"
+import { Header } from "@/components/header";
+import { Hero } from "@/components/hero";
+import { About } from "@/components/about";
+import { Experience } from "@/components/experience";
+import { Projects } from "@/components/projects";
+import { Footer } from "@/components/footer";
+import { SocialSidebar } from "@/components/social-sidebar";
+import { EmailSidebar } from "@/components/email-sidebar";
+import { CursorRing } from "@/components/cursor-ring";
 
 export default function Home() {
   return (
@@ -22,10 +20,8 @@ export default function Home() {
         <About />
         <Experience />
         <Projects />
-        {/* <Writing /> */}
-        {/* <Contact /> */}
       </main>
       <Footer />
     </div>
-  )
+  );
 }

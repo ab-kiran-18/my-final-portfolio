@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useMobile } from "@/hooks/use-mobile"
+import { motion } from "framer-motion";
+import { useMobile } from "@/hooks/use-mobile";
 
 export function EmailSidebar() {
-  const isMobile = useMobile()
+  const isMobile = useMobile();
 
-  if (isMobile) return null
+  if (isMobile) return null;
 
   return (
     <motion.div
@@ -33,5 +33,5 @@ export function EmailSidebar() {
         />
       </div>
     </motion.div>
-  )
+  );
 }
