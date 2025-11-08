@@ -7,7 +7,6 @@ import { useMobile } from "@/hooks/use-mobile";
 
 export function Hero() {
   const [isMounted, setIsMounted] = useState(false);
-  const isMobile = useMobile();
 
   useEffect(() => {
     setIsMounted(true);

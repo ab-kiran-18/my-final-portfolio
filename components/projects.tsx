@@ -5,7 +5,6 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
-import { useMobile } from "@/hooks/use-mobile";
 
 const featuredProjects = [
   {

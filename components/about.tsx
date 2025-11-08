@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { useMobile } from "@/hooks/use-mobile";
 
 const skills = [
   "JavaScript (ES6+)",
@@ -19,7 +18,6 @@ const skills = [
 export function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const isMobile = useMobile();
 
   return (
     <section id="about" ref={ref} className="py-16 sm:py-24">
@@ -86,7 +84,7 @@ export function About() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <div className="relative w-48 h-48 sm:w-60 sm:h-60 md:w-64 md:h-64 rounded-md overflow-hidden group">
+          <div className="relative w-48 h-48 sm:w-60 sm:h-60 md:w-64 md:h-64 rounded-xl overflow-hidden group">
             <div className="absolute inset-0 bg-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
             <Image
               src="/assets/about/profile-img.png"
@@ -98,7 +96,7 @@ export function About() {
               quality={90}
             />
           </div>
-          <div className="absolute inset-0 md:h-64 rounded-md border-2 border-green transform translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
+          <div className="absolute inset-0 md:h-64 rounded-xl border-2 border-green transform translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
         </motion.div>
       </div>
     </section>
