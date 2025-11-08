@@ -141,14 +141,14 @@ export function Experience() {
           </div>
         </motion.div>
 
-        <div className="relative flex-1 min-h-[550px]">
+        <div className="relative flex-1 min-h-[300px] sm:min-h-[550px]">
           <AnimatePresence mode="wait">
             {jobs?.map(
               (job, i) =>
                 activeTabId === i && (
                   <motion.div
                     key={i}
-                    className="space-y-4 sm:space-y-6 absolute w-full"
+                    className="space-y-4 sm:space-y-6 relative w-full"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
