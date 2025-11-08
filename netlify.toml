@@ -3,7 +3,7 @@
 # The @netlify/plugin-nextjs will handle the output directory automatically
 
 [build]
-  command = "npm run build"
+  command = "pnpm install && pnpm run build"
   
 [build.environment]
   NODE_VERSION = "20"
