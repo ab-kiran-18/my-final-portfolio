@@ -21,7 +21,7 @@ export function useIntersectionObserver<T extends HTMLElement = HTMLDivElement>(
 
     if (!node) return
 
-    const hasIOSupport = !!window.IntersectionObserver
+    const hasIOSupport = !!window?.IntersectionObserver
 
     if (!hasIOSupport) {
       // Fallback for browsers that don't support IntersectionObserver
@@ -32,9 +32,9 @@ export function useIntersectionObserver<T extends HTMLElement = HTMLDivElement>(
     const observer = new IntersectionObserver(
       ([entry]) => {
         // Update our state when observer callback fires
-        setIsVisible(entry.isIntersecting)
+        setIsVisible(entry?.isIntersecting ?? false)
 
-        if (entry.isIntersecting && freezeOnceVisible) {
+        if (entry?.isIntersecting && freezeOnceVisible) {
           observer.unobserve(node)
         }
       },

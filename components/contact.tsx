@@ -26,7 +26,7 @@ export function Contact() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormState({
       ...formState,
-      [e.target.name]: e.target.value,
+      [e?.target?.name || ""]: e?.target?.value || "",
     })
   }
 

@@ -22,10 +22,10 @@ export function CursorRing() {
     setIsMounted(true)
 
     // Only add event listeners on desktop
-    if (typeof window !== "undefined" && window.innerWidth >= 768) {
+    if (typeof window !== "undefined" && (window?.innerWidth ?? 0) >= 768) {
       const moveCursor = (e: MouseEvent) => {
-        cursorX.set(e.clientX)
-        cursorY.set(e.clientY)
+        cursorX.set(e?.clientX ?? 0)
+        cursorY.set(e?.clientY ?? 0)
       }
 
       const handleMouseEnter = () => setIsHovering(true)

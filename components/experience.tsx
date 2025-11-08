@@ -71,11 +71,11 @@ export function Experience() {
 
       if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
         setTabFocus((prev) =>
-          prev === null || prev === 0 ? jobs.length - 1 : prev - 1
+          prev === null || prev === 0 ? (jobs?.length ?? 1) - 1 : prev - 1
         );
       } else if (e.key === "ArrowDown" || e.key === "ArrowRight") {
         setTabFocus((prev) =>
-          prev === null || prev === jobs.length - 1 ? 0 : prev + 1
+          prev === null || prev === (jobs?.length ?? 0) - 1 ? 0 : prev + 1
         );
       }
     }
@@ -103,10 +103,14 @@ export function Experience() {
           onKeyDown={onKeyDown}
         >
           <div className="flex md:flex-col min-w-full w-max">
-            {jobs.map((job, i) => (
+            {jobs?.map((job, i) => (
               <button
                 key={i}
-                ref={(el) => (tabsRef.current[i] = el)}
+                ref={(el) => {
+                  if (el) {
+                    tabsRef.current[i] = el;
+                  }
+                }}
                 className={`px-4 sm:px-5 py-2 sm:py-3 font-mono text-xs sm:text-sm whitespace-nowrap focus-ring rounded transition-all duration-300 ${
                   activeTabId === i
                     ? "text-green bg-light-navy/50 relative"
@@ -139,7 +143,7 @@ export function Experience() {
 
         <div className="relative flex-1 min-h-[550px]">
           <AnimatePresence mode="wait">
-            {jobs.map(
+            {jobs?.map(
               (job, i) =>
                 activeTabId === i && (
                   <motion.div
@@ -155,15 +159,15 @@ export function Experience() {
                     tabIndex={0}
                   >
                     <h3 className="text-lg sm:text-xl font-medium text-lightest-slate">
-                      <span>{job.title}</span>{" "}
+                      <span>{job?.title}</span>{" "}
                       <span className="text-green">
                         @{" "}
                         <Link
-                          href={job.url}
+                          href={job?.url || "#"}
                           className="link inline-flex items-center group"
                           target="_blank"
                         >
-                          {job.company}
+                          {job?.company}
                           <ExternalLink
                             size={16}
                             className="ml-1 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
@@ -173,11 +177,11 @@ export function Experience() {
                     </h3>
 
                     <p className="font-mono text-xs sm:text-sm text-light-slate">
-                      {job.range}
+                      {job?.range}
                     </p>
 
                     <ul className="space-y-3">
-                      {job.duties.map((duty, j) => (
+                      {job?.duties?.map((duty, j) => (
                         <motion.li
                           key={j}
                           className="flex items-start"
@@ -197,7 +201,7 @@ export function Experience() {
                     </ul>
 
                     <div className="flex flex-wrap gap-2 pt-2">
-                      {job.tech.map((tech, j) => (
+                      {job?.tech?.map((tech, j) => (
                         <motion.span
                           key={j}
                           className="px-2 sm:px-3 py-1 rounded-full bg-light-navy text-green text-xs font-mono border border-green/20 shadow-sm"

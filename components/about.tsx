@@ -63,7 +63,7 @@ export function About() {
             </p>
             <p>Here are a few technologies I've been working with recently:</p>
             <ul className="grid grid-cols-2 gap-2 mt-4">
-              {skills.map((skill, i) => (
+              {skills?.map((skill, i) => (
                 <motion.li
                   key={i}
                   className="flex items-center font-mono text-xs sm:text-sm"

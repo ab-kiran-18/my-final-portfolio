@@ -74,7 +74,7 @@ export function Writing() {
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
-          {articles.map((article, i) => (
+          {articles?.map((article, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
@@ -83,13 +83,13 @@ export function Writing() {
               className="group"
             >
               <Link
-                href={article.url}
+                href={article?.url || "#"}
                 className="block bg-light-navy/50 backdrop-blur-sm border border-lightest-navy/20 rounded-lg p-4 sm:p-6 h-full hover:bg-light-navy/80 transition-colors duration-300"
               >
                 <div className="flex items-start justify-between mb-3 sm:mb-4">
                   <div className="flex items-center">
-                    <span className="mr-2 sm:mr-3">{article.icon}</span>
-                    <span className="font-mono text-light-slate text-xs sm:text-sm">{article.year}</span>
+                    <span className="mr-2 sm:mr-3">{article?.icon}</span>
+                    <span className="font-mono text-light-slate text-xs sm:text-sm">{article?.year}</span>
                   </div>
                   <ArrowUpRight
                     size={isMobile ? 16 : 18}
@@ -97,9 +97,9 @@ export function Writing() {
                   />
                 </div>
                 <h3 className="text-base sm:text-xl font-semibold text-lightest-slate mb-2 sm:mb-3 group-hover:text-green transition-colors duration-300">
-                  {article.title}
+                  {article?.title}
                 </h3>
-                <p className="text-light-slate text-xs sm:text-sm">{article.description}</p>
+                <p className="text-light-slate text-xs sm:text-sm">{article?.description}</p>
               </Link>
             </motion.div>
           ))}

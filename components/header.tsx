@@ -23,7 +23,7 @@ export function Header() {
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious() || 0;
+    const previous = scrollY?.getPrevious() ?? 0;
 
     if (latest > 50) {
       setHidden(latest > previous);
@@ -34,8 +34,8 @@ export function Header() {
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (isOpen && !target.closest("nav")) {
+      const target = e?.target as HTMLElement;
+      if (isOpen && !target?.closest?.("nav")) {
         setIsOpen(false);
       }
     };
@@ -59,7 +59,7 @@ export function Header() {
   return (
     <motion.header
       className={`fixed w-full top-0 z-50 px-5 sm:px-6 md:px-12 lg:px-24 backdrop-blur-md transition-all duration-300 ${
-        scrollY.get() > 50
+        (scrollY?.get() ?? 0) > 50
           ? "bg-navy/90 py-3 shadow-md"
           : "bg-transparent py-4 sm:py-6"
       }`}
@@ -89,19 +89,19 @@ export function Header() {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <ul className="flex space-x-8 font-mono text-sm">
-            {navLinks.map((link, i) => (
+            {navLinks?.map((link, i) => (
               <motion.li
                 key={i}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.1 * i }}
               >
-                <Link
-                  href={link.url}
-                  className="nav-link focus-ring group relative px-2 py-1"
-                >
+                  <Link
+                    href={link?.url || "#"}
+                    className="nav-link focus-ring group relative px-2 py-1"
+                  >
                   {/* <span className="text-green mr-1">0{i + 1}.</span>  */}
-                  {link.name}
+                  {link?.name}
                   <span className="absolute inset-0 rounded-md bg-green/10 scale-0 group-hover:scale-100 transition-transform duration-300 -z-10"></span>
                 </Link>
               </motion.li>
@@ -151,7 +151,7 @@ export function Header() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             <ul className="flex flex-col space-y-8 items-center font-mono text-lg">
-              {navLinks.map((link, i) => (
+              {navLinks?.map((link, i) => (
                 <motion.li
                   key={i}
                   initial={{ opacity: 0, y: -10 }}
@@ -159,12 +159,12 @@ export function Header() {
                   transition={{ duration: 0.3, delay: 0.1 * i }}
                 >
                   <Link
-                    href={link.url}
+                    href={link?.url || "#"}
                     className="nav-link focus-ring text-xl flex flex-col items-center"
                     onClick={() => setIsOpen(false)}
                   >
                     <span className="text-green text-sm mb-1">0{i + 1}.</span>
-                    <span>{link.name}</span>
+                    <span>{link?.name}</span>
                   </Link>
                 </motion.li>
               ))}

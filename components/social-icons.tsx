@@ -28,7 +28,7 @@ export function SocialIcons({ orientation = "horizontal" }: SocialIconsProps) {
 
   return (
     <ul className={`flex ${orientation === "vertical" ? "flex-col space-y-6" : "space-x-6"}`}>
-      {socialLinks.map((social, i) => (
+      {socialLinks?.map((social, i) => (
         <motion.li
           key={i}
           initial={{ opacity: 0, y: 10 }}
@@ -37,13 +37,13 @@ export function SocialIcons({ orientation = "horizontal" }: SocialIconsProps) {
           whileHover={{ y: -3 }}
         >
           <a
-            href={social.url}
-            aria-label={social.name}
+            href={social?.url || "#"}
+            aria-label={social?.name}
             target="_blank"
             rel="noopener noreferrer"
             className="text-light-slate hover:text-green transition-colors duration-300 focus-ring inline-block p-2"
           >
-            {social.icon}
+            {social?.icon}
           </a>
         </motion.li>
       ))}
