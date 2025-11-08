@@ -4,12 +4,69 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
+const inter = Inter({ 
+  subsets: ["latin"], 
+  variable: "--font-inter",
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "arial"],
+})
 
 export const metadata: Metadata = {
-  title: "Personal Portfolio",
-  description: "A personal portfolio website built with Next.js and Tailwind CSS",
-    generator: 'v0.dev'
+  title: {
+    default: "AB Kiran - Product Engineer & Frontend Developer",
+    template: "%s | AB Kiran",
+  },
+  description: "Product Engineer specializing in building exceptional web experiences. Currently focused on building User-Centric, Pixel Perfect, High Performant products at Zeko AI.",
+  keywords: ["Frontend Developer", "Product Engineer", "React", "Next.js", "TypeScript", "Web Development", "Portfolio"],
+  authors: [{ name: "AB Kiran" }],
+  creator: "AB Kiran",
+  publisher: "AB Kiran",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio.example.com"),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio.example.com",
+    title: "AB Kiran - Product Engineer & Frontend Developer",
+    description: "Product Engineer specializing in building exceptional web experiences. Currently focused on building User-Centric, Pixel Perfect, High Performant products at Zeko AI.",
+    siteName: "AB Kiran Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AB Kiran - Product Engineer & Frontend Developer",
+    description: "Product Engineer specializing in building exceptional web experiences.",
+    creator: "@yourtwitter",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    // Add verification codes if you have them
+    // google: "your-google-verification-code",
+    // yandex: "your-yandex-verification-code",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+}
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a192f" },
+  ],
 }
 
 export default function RootLayout({

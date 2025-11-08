@@ -95,7 +95,7 @@ export function Hero() {
               I'm a Product Engineer specializing in building exceptional web
               experiences. Currently, I'm focused on building User-Centric,
               Pixel Perfect, High Performant products at{" "}
-              <a href="#" className="text-green hover:underline">
+              <a href="https://www.linkedin.com/company/zekoai/" className="text-green hover:underline">
                 Zeko AI
               </a>
               .

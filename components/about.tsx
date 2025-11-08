@@ -44,7 +44,7 @@ export function About() {
               My love for Web development started back in my 2nd year of
               college. One day, I stumbled upon a youtube video on a CSS
               challenge by{" "}
-              <a href="#" className="link">
+              <a href="https://www.youtube.com/@KevinPowell" className="link">
                 Kevin Powell
               </a>{" "}
               and that just hooked me! I got fascinated with how you can style
@@ -54,7 +54,7 @@ export function About() {
             </p>
             <p>
               Now, I’m{" "}
-              <a href="#" className="link">
+              <a href="https://www.linkedin.com/company/zekoai/" className="link">
                 Leading the Frontend at Zeko AI
               </a>{" "}
               , a startup where I get to turn ideas into reality every day. I
@@ -90,9 +90,12 @@ export function About() {
             <div className="absolute inset-0 bg-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
             <Image
               src="/assets/about/profile-img.png"
-              alt="Profile picture"
+              alt="AB Kiran - Product Engineer and Frontend Developer"
               fill
+              sizes="(max-width: 640px) 192px, (max-width: 768px) 240px, 256px"
               className="object-cover transition-transform duration-500 group-hover:scale-105"
+              priority
+              quality={90}
             />
           </div>
           <div className="absolute inset-0 md:h-64 rounded-md border-2 border-green transform translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>

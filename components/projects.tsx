@@ -160,10 +160,13 @@ export function Projects() {
                   >
                     <Image
                       src={project?.image || "/placeholder.svg"}
-                      alt={project?.title || "Project"}
-                      width={600}
-                      height={400}
+                      alt={`${project?.title || "Project"} - Screenshot`}
+                      width={1200}
+                      height={800}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                       className="object-cover transition-transform duration-500"
+                      quality={85}
+                      priority={i === 0}
                     />
                   </motion.div>
                 </Link>
@@ -184,10 +187,13 @@ export function Projects() {
                   >
                     <Image
                       src={project?.image || "/placeholder.svg"}
-                      alt={project?.title || "Project"}
-                      width={600}
-                      height={400}
+                      alt={`${project?.title || "Project"} - Screenshot`}
+                      width={1200}
+                      height={800}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                       className="object-cover transition-transform duration-500"
+                      quality={85}
+                      priority={i === 0}
                     />
                   </motion.div>
                 </div>
@@ -329,9 +335,12 @@ export function Projects() {
                     >
                       <Image
                         src={project?.image || "/placeholder.svg"}
-                        alt={project?.title || "Project"}
+                        alt={`${project?.title || "Project"} - Project screenshot`}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="object-cover opacity-70 transition-opacity duration-500 group-hover:opacity-90"
+                        quality={80}
+                        loading="lazy"
                       />
                     </motion.div>
                   </div>
