@@ -20,6 +20,11 @@ const nextConfig = {
   reactStrictMode: true,
   // Remove X-Powered-By header for security
   poweredByHeader: false,
+  // Experimental settings for better build stability
+  experimental: {
+    // Optimize build traces
+    optimizePackageImports: ['lucide-react'],
+  },
 }
 
 export default nextConfig

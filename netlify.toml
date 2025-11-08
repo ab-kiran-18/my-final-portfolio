@@ -1,3 +1,7 @@
+# Netlify configuration for Next.js 15
+# IMPORTANT: In Netlify UI, make sure "Publish directory" is EMPTY/BLANK
+# The @netlify/plugin-nextjs will handle the output directory automatically
+
 [build]
   command = "npm run build"
   
