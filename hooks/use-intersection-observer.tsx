@@ -12,8 +12,8 @@ export function useIntersectionObserver<T extends HTMLElement = HTMLDivElement>(
   threshold = 0.1,
   rootMargin = "0px",
   freezeOnceVisible = true,
-}: UseIntersectionObserverProps = {}): [RefObject<T>, boolean] {
-  const ref = useRef<T>(null)
+}: UseIntersectionObserverProps = {}): [RefObject<T | null>, boolean] {
+  const ref = useRef<T | null>(null)
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
