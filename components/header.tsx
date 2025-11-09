@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 const navLinks = [
   { name: "About", url: "#about" },
   { name: "Experience", url: "#experience" },
-  { name: "Contact", url: "#contact" },
+  // { name: "Contact", url: "#contact" },
 ];
 
 export function Header() {

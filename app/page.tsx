@@ -18,7 +18,6 @@ export default function Home() {
       <Header />
       <SocialSidebar />
       <EmailSidebar />
-      {/* Hero section outside container for full-width background */}
       <Hero />
       <main className="px-6 md:px-12 lg:px-24 mx-auto max-w-7xl">
         <About />
