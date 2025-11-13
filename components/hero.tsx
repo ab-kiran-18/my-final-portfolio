@@ -91,10 +91,14 @@ export function Hero() {
               variants={itemVariants}
               className="max-w-xl text-slate text-base sm:text-lg"
             >
-              I'm a Product Engineer specializing in building exceptional web
-              experiences. Currently, I'm focused on building User-Centric,
-              Pixel Perfect, High Performant products at{" "}
-              <a href="https://www.linkedin.com/company/zekoai/" className="text-green hover:underline">
+              I'm a Product Engineer specializing in crafting exceptional web
+              experiences. I currently building enterprise-grade systems and
+              AI-driven interfaces with a strong focus on user-centric design
+              and high performance at{" "}
+              <a
+                href="https://www.linkedin.com/company/zekoai/"
+                className="text-green hover:underline"
+              >
                 Zeko AI
               </a>
               .
