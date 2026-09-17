@@ -5,14 +5,14 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 
 const skills = [
-  "JavaScript (ES6+)",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Tailwind CSS",
-  "Framer Motion",
-  "Web Performance",
+  "Urban Governance",
+  "CSR & Social Impact",
+  "Field Research",
+  "Stakeholder Engagement",
+  "Program Management",
+  "Data Analysis & Excel",
+  "Power BI",
+  "GIS & Spatial Analysis",
 ];
 
 export function About() {
@@ -39,25 +39,18 @@ export function About() {
         >
           <div className="space-y-4 sm:space-y-5 text-slate text-base sm:text-lg">
             <p>
-              My love for Web development started back in my 2nd year of
-              college. One day, I stumbled upon a youtube video on a CSS
-              challenge by{" "}
-              <a href="https://www.youtube.com/@KevinPowell" className="link">
-                Kevin Powell
-              </a>{" "}
-              and that just hooked me! I got fascinated with how you can style
-              things and even create complex shapes using just CSS. I spent a
-              lot of time experimenting and making all sorts of designs, which
-              really made me fall in love with Frontend.
+            With a background in Electronics & Communication Engineering and currently pursuing an MBA in Urban Management & Governance at XIM University, I have developed a strong interest in understanding how cities, communities, institutions and programs work together to create meaningful outcomes
             </p>
             <p>
-              Now, I’m{" "}
+            My experience with{" "}
               <a href="https://www.linkedin.com/company/zekoai/" className="link">
-                Leading the Frontend at Zeko AI
+              Tata Steel Foundation
               </a>{" "}
-              , a startup where I get to turn ideas into reality every day. I
-              love working with new tech, creating smooth User Experiences,
-              User-centric and Pixel Perfect web .
+              gave me hands-on exposure to CSR and social-impact programs, 
+              where I worked on large-scale applicant evaluation, conducted 100+ interviews, managed 600+ records and
+              supported participant profiling for the Tribal Leadership Programme. I also worked with Raipur Municipal 
+              Corporation, gaining practical exposure to municipal service delivery, sanitation, waste management,
+              livelihood initiatives and ward-level governance.
             </p>
             <p>Here are a few technologies I've been working with recently:</p>
             <ul className="grid grid-cols-2 gap-2 mt-4">
@@ -88,7 +81,7 @@ export function About() {
             <div className="absolute inset-0 bg-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
             <Image
               src="/assets/about/profile-img.png"
-              alt="AB Kiran - Product Engineer and Frontend Developer"
+              alt="B Sri Nanditha - Product Engineer and Frontend Developer"
               fill
               sizes="(max-width: 640px) 192px, (max-width: 768px) 240px, 256px"
               className="object-cover transition-transform duration-500 group-hover:scale-105"

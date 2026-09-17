@@ -52,7 +52,7 @@ export function Header() {
             href="/"
             className="text-green font-mono text-lg sm:text-xl relative group"
           >
-            <span className="relative z-10">AB</span>
+            <span className="relative z-10">SN</span>
             <span className="absolute -inset-1 rounded bg-green/10 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-0"></span>
           </Link>
         </motion.div>

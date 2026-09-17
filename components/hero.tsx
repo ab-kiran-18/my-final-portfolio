@@ -67,7 +67,15 @@ export function Hero() {
       {/* Content Container - matches page padding */}
       <div className="px-6 md:px-12 lg:px-24 mx-auto max-w-7xl w-full relative z-10">
         {isMounted && (
-          <motion.div
+
+<motion.div
+variants={containerVariants}
+initial="hidden"
+animate="visible"
+className="space-y-5 sm:space-y-6 md:pt-6"
+>
+
+<motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -77,31 +85,28 @@ export function Hero() {
               variants={itemVariants}
               className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-lightest-slate"
             >
-              AB Kiran
+              B Sri Nanditha
             </motion.h1>
-
-            <motion.h2
-              variants={itemVariants}
-              className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-slate"
-            >
-              I build great web experiences.
-            </motion.h2>
 
             <motion.p
               variants={itemVariants}
               className="max-w-xl text-slate text-base sm:text-lg"
             >
-              I'm a Product Engineer specializing in crafting exceptional web
-              experiences. I currently building enterprise-grade systems and
-              AI-driven interfaces with a strong focus on user-centric design
-              and high performance at{" "}
+              Urban Development | Governance | Social Impact | Research & Program Management.
+            </motion.p>
+
+            <motion.p
+              variants={itemVariants}
+              className="max-w-xl text-slate text-sm sm:text-lg"
+            >
+              MBA candidate in Urban Management & Governance at {" "}
               <a
-                href="https://www.linkedin.com/company/zekoai/"
+                href="https://www.xim.edu/"
                 className="text-green hover:underline"
               >
-                Zeko AI
-              </a>
-              .
+                XIM University
+              </a> {" "}
+                with hands-on experience in CSR programs, municipal governance, field research, stakeholder engagement and data-driven program management
             </motion.p>
 
             <motion.div variants={itemVariants} className="pt-4 sm:pt-6">
@@ -109,15 +114,27 @@ export function Hero() {
                 className="bg-green/95 text-navy hover:bg-green transition-all duration-200 hover:scale-105 rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.5),0_2px_6px_rgba(0,0,0,0.3),inset_0_-2px_4px_rgba(0,0,0,0.4),inset_0_2px_4px_rgba(255,255,255,0.15)]"
                 asChild
               >
-                <a href="#projects" className="group relative overflow-hidden">
+                <a href="#about" className="group relative overflow-hidden">
                   <span className="relative z-10 text-lg">
-                    Check out my work
+                    Know about me
                   </span>
                   <span className="absolute inset-0 bg-green/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
                 </a>
               </Button>
             </motion.div>
           </motion.div>
+
+<motion.div
+variants={containerVariants}
+initial="hidden"
+animate="visible"
+className="space-y-5 sm:space-y-6 md:pt-6"
+>
+</motion.div>
+</motion.div>
+
+  
+          
         )}
       </div>
     </section>

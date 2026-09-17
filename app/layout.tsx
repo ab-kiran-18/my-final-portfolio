@@ -15,26 +15,26 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "AB Kiran - Product Engineer & Frontend Developer",
-    template: "%s | AB Kiran",
+    default: "B Sri Nanditha - Product Engineer & Frontend Developer",
+    template: "%s | B Sri Nanditha",
   },
   description: "Product Engineer specializing in building exceptional web experiences. Currently focused on building User-Centric, Pixel Perfect, High Performant products at Zeko AI.",
   keywords: ["Frontend Developer", "Product Engineer", "React", "Next.js", "TypeScript", "Web Development", "Portfolio"],
-  authors: [{ name: "AB Kiran" }],
-  creator: "AB Kiran",
-  publisher: "AB Kiran",
+  authors: [{ name: "B Sri Nanditha" }],
+  creator: "B Sri Nanditha",
+  publisher: "B Sri Nanditha",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio.example.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio.example.com",
-    title: "AB Kiran - Product Engineer & Frontend Developer",
+    title: "B Sri Nanditha - Product Engineer & Frontend Developer",
     description: "Product Engineer specializing in building exceptional web experiences. Currently focused on building User-Centric, Pixel Perfect, High Performant products at Zeko AI.",
-    siteName: "AB Kiran Portfolio",
+    siteName: "B Sri Nanditha Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AB Kiran - Product Engineer & Frontend Developer",
+    title: "B Sri Nanditha - Product Engineer & Frontend Developer",
     description: "Product Engineer specializing in building exceptional web experiences.",
     creator: "@yourtwitter",
   },
@@ -77,7 +77,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans bg-navy text-slate-300 antialiased`}>
+      <body className={`${inter.variable} font-sans bg-pink text-slate-300 antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}
           <Analytics />

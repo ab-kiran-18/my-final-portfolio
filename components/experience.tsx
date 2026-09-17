@@ -10,40 +10,90 @@ import { useMobile } from "@/hooks/use-mobile";
 
 const jobs = [
   {
-    company: "Zeko AI",
-    url: "https://zeko.ai/",
-    title: "Product Engineer - Frontend",
-    range: "2023 - Present",
+    company: "Tata Steel Foundation",
+  
+    url: "",
+  
+    title: "CSR Intern - Tribal Leadership Programme",
+  
+    range: "Apr 2026 - Jun 2026",
+  
     duties: [
-      "Led the end-to-end development of Zeko’s AI Interview platform, improving user engagement and boosting NPS by 25% through refined UX and real-time interaction workflows",
-      "Owned the complete frontend architecture for Interview, Dashboard, and LinkedIn Hunt, ensuring a unified, accessible, and high-performant experience across all products",
-      "Migrated legacy systems to a Turborepo-powered Next.js + TypeScript architecture, reducing load times by 55% and sustaining Lighthouse scores above 90.",
-      "Built and standardized a robust atomic design system, increasing developer velocity by 30%, elevating reusability, and aligning UI/UX across the product ecosystem",
-      "Engineered real-time, interactive modules using WebSockets, SSE, and dynamic Implemented scalable CI/CD pipelines with SST + GitHub Actions, enabling automated, reliable, and zero-downtime deployments to staging and production, style, and ship high-quality websites, design systems, and digital experiences",
-      "Optimized Core Web Vitals through bundle splitting, lazy loading, CDN caching, and advanced performance techniques—achieving high-performant, enterprise-grade frontend delivery",
-      "Integrated REST and GraphQL APIs using React Query-based caching, ensuring resilient data flows, reduced API overhead, and a smoother experience across complex workflows.",
+      "Supported the participant selection process for the Tribal Leadership Programme (TLP) under the SAMVAAD Ecosystem, working on leadership identification, assessment, shortlisting, and participant profiling.",
+  
+      "Reviewed and evaluated nearly 600 applications and contributed to shortlisting 138 participants based on leadership potential, community contribution, aspirations, social impact, and interview performance.",
+  
+      "Conducted 100+ structured interviews with applicants from different states across India, assessing their leadership journeys, community work, achievements, aspirations, and social impact.",
+  
+      "Applied the AIR evaluation framework and impact-based assessment approach to systematically evaluate applicants beyond academic or professional achievements.",
+  
+      "Managed and validated 600+ participant records using Microsoft Excel, including interview schedules, evaluation status, regional categorisation, shortlisting updates, and summary reporting.",
+  
+      "Prepared detailed profiles for shortlisted participants covering their background, achievements, leadership journey, and community contribution, along with presentation decks for programme review sessions.",
+  
+      "Supported programme documentation, reporting, coordination, and cross-team communication while working within the wider SAMVAAD social-impact ecosystem."
     ],
+  
     tech: [
-      "React.js",
-      "Next.js",
-      "TypeScript",
-      "Javascript",
-      "Tailwind",
-      "Styled-components",
-      "Web Performance",
-      "User Experience",
-      "Code Reusability",
-      "Shadcn",
-      "MUI",
-      "Turbo Repo",
-      "MongoDB",
-      "Node.js",
-      "Python",
-      "AWS Lambda",
-      "AWS S3",
-      "DynamoDB",
-    ],
+      "CSR",
+      "Social Impact",
+      "Program Management",
+      "Candidate Assessment",
+      "Structured Interviews",
+      "AIR Framework",
+      "Impact Assessment",
+      "Microsoft Excel",
+      "Data Management",
+      "Participant Profiling",
+      "Stakeholder Engagement",
+      "Documentation",
+      "PowerPoint",
+      "Program Coordination"
+    ]
   },
+  {
+    company: "Raipur Municipal Corporation",
+  
+    url: "",
+  
+    title: "Urban Governance & Municipal Operations Intern",
+  
+    range: "Nov 2025 - Jan 2026",
+  
+    duties: [
+      "Participated in an Urban Management Municipal Immersion focused on understanding the functioning of urban governance, municipal administration, infrastructure, and public-service delivery in Raipur.",
+  
+      "Conducted field observations and interacted with municipal stakeholders to understand how essential civic services such as water supply, sanitation, solid waste management, sewage treatment, and urban infrastructure are planned and operated.",
+  
+      "Contributed to a primary survey of 104 college students to assess awareness of municipal functions, satisfaction with civic services, sanitation concerns, and expectations from Raipur Municipal Corporation.",
+  
+      "Studied solid waste management, sewage treatment, and water filtration and distribution systems through field visits, documenting operational processes, service-delivery challenges, and environmental considerations.",
+  
+      "Examined NULM-supported Self Help Groups and livelihood initiatives to understand how municipal and government support translates into community-level social and economic outcomes.",
+  
+      "Analysed urban development factors including demographics, land use, connectivity, infrastructure, municipal governance, and service-delivery challenges to develop practical observations and recommendations.",
+  
+      "Studied public transport infrastructure and operations through the Raipur ISBT visit, gaining exposure to terminal planning, passenger facilities, traffic management, and the role of transport infrastructure in urban development."
+    ],
+  
+    tech: [
+      "Urban Governance",
+      "Municipal Operations",
+      "Field Research",
+      "Primary Research",
+      "Stakeholder Engagement",
+      "Urban Infrastructure",
+      "Public Service Delivery",
+      "Survey Research",
+      "Data Analysis",
+      "Solid Waste Management",
+      "Water & Sanitation",
+      "NULM",
+      "Livelihood Programs",
+      "Urban Mobility",
+      "Report Writing"
+    ]
+  }
 ];
 
 export function Experience() {
@@ -89,7 +139,7 @@ export function Experience() {
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}
       >
-        <span className="mr-2 font-mono text-green">02.</span> Where I've Worked
+        <span className="mr-2 font-mono text-green">02. Experience</span> 
       </motion.h2>
 
       <div className="flex flex-col md:flex-row gap-6 sm:gap-8 max-w-4xl mx-auto">

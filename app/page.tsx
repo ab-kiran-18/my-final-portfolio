@@ -22,7 +22,7 @@ export default function Home() {
       <main className="px-6 md:px-12 lg:px-24 mx-auto max-w-7xl">
         <About />
         <Experience />
-        <Projects />
+        {/* <Projects /> */}
       </main>
       <Footer />
     </div>
