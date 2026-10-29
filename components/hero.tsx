@@ -2,15 +2,14 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
-import { useMobile } from "@/hooks/use-mobile";
+import type { RefObject } from "react";
+import { ProfileSlot } from "@/components/sticky-profile-image";
 
-export function Hero() {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+export function Hero({
+  startRef,
+}: {
+  startRef: RefObject<HTMLDivElement | null>;
+}) {
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -29,9 +28,9 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center pt-16 sm:pt-0 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center pt-16 sm:pt-0">
       {/* Full-width Animated Gradient Background */}
-      <div className="absolute inset-0 w-full -z-10">
+      <div className="absolute inset-0 w-full -z-10 overflow-hidden">
         {/* Base gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-light-navy opacity-100" />
         {/* Animated gradient orbs */}
@@ -66,76 +65,62 @@ export function Hero() {
 
       {/* Content Container - matches page padding */}
       <div className="px-6 md:px-12 lg:px-24 mx-auto max-w-7xl w-full relative z-10">
-        {isMounted && (
-
-<motion.div
-variants={containerVariants}
-initial="hidden"
-animate="visible"
-className="space-y-5 sm:space-y-6 md:pt-6"
->
-
-<motion.div
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="space-y-5 sm:space-y-6 md:pt-6"
+            className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12"
           >
-            <motion.h1
-              variants={itemVariants}
-              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-lightest-slate"
-            >
-              B Sri Nanditha
-            </motion.h1>
+            <div className="col-span-1 md:col-span-2 order-2 md:order-1">
+              <div className="space-y-5 sm:space-y-6 md:pt-6 md:flex-1">
+                <motion.h1
+                  variants={itemVariants}
+                  className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-lightest-slate"
+                >
+                  B Sri Nanditha
+                </motion.h1>
 
-            <motion.p
-              variants={itemVariants}
-              className="max-w-xl text-slate text-base sm:text-lg"
-            >
-              Urban Development | Governance | Social Impact | Research & Program Management.
-            </motion.p>
+                <motion.p
+                  variants={itemVariants}
+                  className="max-w-xl text-slate text-base sm:text-lg"
+                >
+                  Urban Development | Governance | Social Impact | Research & Program Management.
+                </motion.p>
 
-            <motion.p
-              variants={itemVariants}
-              className="max-w-xl text-slate text-sm sm:text-lg"
-            >
-              MBA candidate in Urban Management & Governance at {" "}
-              <a
-                href="https://www.xim.edu/"
-                className="text-green hover:underline"
-              >
-                XIM University
-              </a> {" "}
-                with hands-on experience in CSR programs, municipal governance, field research, stakeholder engagement and data-driven program management
-            </motion.p>
+                <motion.p
+                  variants={itemVariants}
+                  className="max-w-xl text-slate text-sm sm:text-lg"
+                >
+                  MBA candidate in Urban Management & Governance at {" "}
+                  <a
+                    href="https://www.xim.edu/"
+                    className="text-green hover:underline"
+                  >
+                    XIM University
+                  </a> {" "}
+                  with hands-on experience in CSR programs, municipal governance, field research, stakeholder engagement and data-driven program management
+                </motion.p>
 
-            <motion.div variants={itemVariants} className="pt-4 sm:pt-6">
-              <Button
-                className="bg-green/95 text-navy hover:bg-green transition-all duration-200 hover:scale-105 rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.5),0_2px_6px_rgba(0,0,0,0.3),inset_0_-2px_4px_rgba(0,0,0,0.4),inset_0_2px_4px_rgba(255,255,255,0.15)]"
-                asChild
-              >
-                <a href="#about" className="group relative overflow-hidden">
-                  <span className="relative z-10 text-lg">
-                    Know about me
-                  </span>
-                  <span className="absolute inset-0 bg-green/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
-                </a>
-              </Button>
-            </motion.div>
+                <motion.div variants={itemVariants} className="pt-4 sm:pt-6">
+                  <Button
+                    className="bg-green/95 text-navy hover:bg-green transition-all duration-200 hover:scale-105 rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.5),0_2px_6px_rgba(0,0,0,0.3),inset_0_-2px_4px_rgba(0,0,0,0.4),inset_0_2px_4px_rgba(255,255,255,0.15)]"
+                    asChild
+                  >
+                    <a href="#about" className="group relative overflow-hidden">
+                      <span className="relative z-10 text-lg">
+                        Know about me
+                      </span>
+                      <span className="absolute inset-0 bg-green/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+                    </a>
+                  </Button>
+                </motion.div>
+              </div>
+            </div>
+
+          <div className="relative mx-auto order-1 md:order-2">
+            <ProfileSlot slotRef={startRef} className="mx-auto md:mx-0 mt-10" />
+          </div>
           </motion.div>
-
-<motion.div
-variants={containerVariants}
-initial="hidden"
-animate="visible"
-className="space-y-5 sm:space-y-6 md:pt-6"
->
-</motion.div>
-</motion.div>
-
-  
-          
-        )}
       </div>
     </section>
   );

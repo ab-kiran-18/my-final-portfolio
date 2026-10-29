@@ -1,8 +1,6 @@
 import { Header } from "@/components/header";
-import { Hero } from "@/components/hero";
-import { About } from "@/components/about";
+import { HeroAbout } from "@/components/hero-about";
 import { Experience } from "@/components/experience";
-import { Projects } from "@/components/projects";
 import { Footer } from "@/components/footer";
 import { SocialSidebar } from "@/components/social-sidebar";
 import { EmailSidebar } from "@/components/email-sidebar";
@@ -18,12 +16,10 @@ export default function Home() {
       <Header />
       <SocialSidebar />
       <EmailSidebar />
-      <Hero />
-      <main className="px-6 md:px-12 lg:px-24 mx-auto max-w-7xl">
-        <About />
+      <HeroAbout>
         <Experience />
         {/* <Projects /> */}
-      </main>
+      </HeroAbout>
       <Footer />
     </div>
   );

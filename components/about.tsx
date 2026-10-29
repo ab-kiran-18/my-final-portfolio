@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, type RefObject } from "react";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
+import { ProfileSlot } from "@/components/sticky-profile-image";
 
 const skills = [
   "Urban Governance",
@@ -15,7 +15,11 @@ const skills = [
   "GIS & Spatial Analysis",
 ];
 
-export function About() {
+export function About({
+  endRef,
+}: {
+  endRef: RefObject<HTMLDivElement | null>;
+}) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -77,19 +81,7 @@ export function About() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <div className="relative w-48 h-48 sm:w-60 sm:h-60 md:w-64 md:h-64 rounded-xl overflow-hidden group">
-            <div className="absolute inset-0 bg-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
-            <Image
-              src="/assets/about/profile-img.png"
-              alt="B Sri Nanditha - Product Engineer and Frontend Developer"
-              fill
-              sizes="(max-width: 640px) 192px, (max-width: 768px) 240px, 256px"
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
-              priority
-              quality={90}
-            />
-          </div>
-          <div className="absolute inset-0 md:h-64 rounded-xl border-2 border-green transform translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
+          <ProfileSlot slotRef={endRef} className="mx-auto" />
         </motion.div>
       </div>
     </section>
